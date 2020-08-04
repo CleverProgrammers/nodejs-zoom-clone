@@ -19,6 +19,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 40px;
 }
 
 .main__controls {
@@ -34,6 +35,7 @@
     color: #D2D2D2;
     display: flex;
     justify-content: space-between;
+    padding: 5px;
 }
 
 .main__controls__block {
@@ -46,6 +48,12 @@
     justify-content: center;
     align-items: center;
     padding: 8px 10px;
+    min-width: 80px;
+}
+
+.main__controls__button:hover {
+    background-color: #343434;
+    border-radius: 5px;
 }
 
 .main__controls__button i {
@@ -54,6 +62,10 @@
 
 .leave_meeting {
     color: #EB534B;
+}
+
+.unmute {
+    color: #CC3B33;
 }
 
 
