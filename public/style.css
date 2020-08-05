@@ -49,6 +49,7 @@
     align-items: center;
     padding: 8px 10px;
     min-width: 80px;
+    cursor: pointer;
 }
 
 .main__controls__button:hover {
@@ -73,6 +74,12 @@
 
 .main__chat_window {
     flex-grow: 1;
+    overflow-y: auto;
+}
+
+.messages{
+    color: white;
+    list-style: none;
 }
 
 .main__message_container {
@@ -91,9 +98,7 @@
     color: #EB534B;
 }
 
-.unmute {
+.unmute, .stop {
     color: #CC3B33;
 }
-
-
 
