@@ -1,3 +1,16 @@
+#video-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+video {
+    height: 300px;
+    width: 400px;
+    object-fit: cover;
+    padding: 8px;
+}
+
 .main {
     height: 100vh;
     display: flex;
@@ -77,7 +90,7 @@
     overflow-y: auto;
 }
 
-.messages{
+.messages {
     color: white;
     list-style: none;
 }
@@ -98,7 +111,7 @@
     color: #EB534B;
 }
 
-.unmute, .stop {
+.unmute,
+.stop {
     color: #CC3B33;
 }
-
