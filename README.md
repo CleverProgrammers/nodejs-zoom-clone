@@ -8,4 +8,24 @@ Check out our `Profit With JavaScript Course`    :point_down:
 
 Made with :heart: by [Naz](https://www.instagram.com/nazdumanskyy/) & [Youssef](https://www.instagram.com/youcef.dev/)
 
+# Stack used 
 
+- Node.js
+- Socket.io
+- peer.js
+- ejs
+- uuid
+- Express.js
+- webRTC
+- Socket.io
+
+# Deploy on Heroku 
+
+- heroku login
+- git add .
+- git commit -am "make it better"
+- git push heroku master
+
+# Video Source Link:
+
+- [Youtube](https://www.youtube.com/watch?v=ZVznzY7EjuY)
