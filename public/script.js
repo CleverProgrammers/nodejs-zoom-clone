@@ -1,3 +1,4 @@
+console.log("This is part of the TwilioQuest Game")
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
 const myPeer = new Peer(undefined, {
