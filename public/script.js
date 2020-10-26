@@ -132,3 +132,11 @@ const setPlayVideo = () => {
   `
   document.querySelector('.main__video_button').innerHTML = html;
 }
+
+  // for leave meeting
+   
+  function close_window() {
+    if (confirm("Are You Sure to leave this meeting ?")) {
+      window.close();
+    }
+  }
