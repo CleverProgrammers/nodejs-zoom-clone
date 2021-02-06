@@ -104,7 +104,7 @@ const playStop = () => {
 
 const shareScreen = async () => {
   let captureStream = null
-  
+  let userId=1233
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia()
     connectToNewUser(UserId, captureStream)
