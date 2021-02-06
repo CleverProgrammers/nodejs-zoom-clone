@@ -9,7 +9,7 @@ let myVideoStream;
 const myVideo = document.createElement('video')
 myVideo.muted = true;
 const peers = {}
-navigator.mediaDevices.getDisplayMedia({
+navigator.mediaDevices.getUserMedia({
   video: true,
   audio: true
 }).then(stream => {
@@ -100,6 +100,20 @@ const playStop = () => {
     myVideoStream.getVideoTracks()[0].enabled = true;
   }
 }
+
+
+const shareScreen = async () => {
+  let captureStream = null;
+
+  try {
+    captureStream = await navigator.mediaDevices.getDisplayMedia();
+  } catch (err) {
+    console.error("Error: " + err);
+  }
+  // connectToNewUser(UserId, captureStream);
+  myPeer.call(myUserId, captureStream);
+};
+
 
 const setMuteButton = () => {
   const html = `
