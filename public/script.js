@@ -107,7 +107,7 @@ const shareScreen = async () => {
   let userId=1233
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia()
-    connectToNewUser(UserId, captureStream)
+    connectToNewUser(userId, captureStream)
 
   } catch (err) {
     console.error("Error: " + err)
