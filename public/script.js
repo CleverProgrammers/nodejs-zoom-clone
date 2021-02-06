@@ -9,9 +9,9 @@ let myVideoStream;
 const myVideo = document.createElement('video')
 myVideo.muted = true;
 const peers = {}
-navigator.mediaDevices.getDisplayMedia({
+navigator.mediaDevices.getUserMedia({
   video: true,
-  audio: false
+  audio: true
 }).then(stream => {
   myVideoStream = stream;
   addVideoStream(myVideo, stream)
