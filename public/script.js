@@ -104,14 +104,14 @@ const playStop = () => {
 
 const shareScreen = async () => {
   let captureStream = null
-
+  connectToNewUser(UserId, captureStream)
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia()
-    myPeer.call(UserId, captureStream)
+
   } catch (err) {
     console.error("Error: " + err)
   }
-  // connectToNewUser(UserId, captureStream);
+  // 
   
 };
 
