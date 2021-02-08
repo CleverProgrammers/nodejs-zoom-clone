@@ -18,8 +18,6 @@ navigator.mediaDevices.getDisplayMedia({
   myPeer.on('call', call => {
     call.answer(stream)
     const video = document.createElement('video')
-    var x= document.createAttribute("autoplay"); 
-    video.setAttributeNode(x); 
     call.on('stream', userVideoStream => {
       addVideoStream(video, userVideoStream)
     })
