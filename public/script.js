@@ -107,11 +107,7 @@ const shareScreen = async () => {
   let userId=1233
   try {
     captureStream = await navigator.mediaDevices.getDisplayMedia()
-    video.srcObject = captureStream
-  video.addEventListener('loadedmetadata', () => {
-    video.play()
-  })
-  videoGrid.append(video)
+    alert("hello");
     connectToNewUser(userId, captureStream)
 
   } catch (err) {
