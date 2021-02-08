@@ -103,28 +103,28 @@ const playStop = () => {
 
 
 const shareScreen = async () => {
-  let captureStream = null
-  let userId=1233
- 
- 
-  var displayMediaOptions = {
-    video:{
-        cursor:'always'
-    },
-    audio:false
-}
-
-
-  try {
-    const videoElement =document.getElementById("video")
-    videoElement.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-
-    //connectToNewUser(userId, captureStream)
-    
-
-  } catch (err) {
-    alert(err)
+    let captureStream = null
+    let userId=1233
+  
+  
+    var displayMediaOptions = {
+      video:{
+          cursor:'always'
+      },
+      audio:false
   }
+
+
+    try {
+      const videoElement =document.getElementById("video")
+      videoElement.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+
+      //connectToNewUser(userId, captureStream)
+      
+
+    } catch (err) {
+      alert(err)
+    }
   // 
   
 };
