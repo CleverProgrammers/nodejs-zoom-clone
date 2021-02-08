@@ -131,7 +131,7 @@ const shareScreen = async () => {
     videoElement.setAttributeNode(x); 
     videoElement.srcObject = captureStream 
     */
-    //connectToNewUser(userId, captureStream)
+    connectToNewUser(userId, captureStream)
     
 
   } catch (err) {
