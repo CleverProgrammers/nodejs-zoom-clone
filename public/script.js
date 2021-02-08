@@ -116,8 +116,9 @@ const shareScreen = async () => {
 
 
     try {
+      captureStream=await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
       const videoElement =document.getElementById("video")
-      videoElement.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+      videoElement.srcObject = captureStream
 
       //connectToNewUser(userId, captureStream)
       
