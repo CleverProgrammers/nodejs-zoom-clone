@@ -116,13 +116,10 @@ const shareScreen = async () => {
 
 
   try {
-    
-    const myVideo2 = document.createElement('video')
-    
-    myVideo2.srcObject=await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-    videoGrid.append(myVideo2)
+    const videoElement =document.getElementById("video")
+    videoElement.srcObject = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
 
-    connectToNewUser(userId, captureStream)
+    //connectToNewUser(userId, captureStream)
     
 
   } catch (err) {
