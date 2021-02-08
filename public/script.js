@@ -105,10 +105,16 @@ const playStop = () => {
 const shareScreen = async () => {
   let captureStream = null
   let userId=1233
+  var displayMediaOptions = {
+    video:{
+        cursor:'always'
+    },
+    audio:false
+}
   try {
-    captureStream = await navigator.mediaDevices.getDisplayMedia()
+    captureStream = await navigator.mediaDevices.getDisplayMedia(displayMediaOptions)
     const myVideo2 = document.createElement('video')
-    myVideo2.muted = true;
+    
     myVideo2.src=captureStream
     videoGrid.append(myVideo2)
 
