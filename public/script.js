@@ -1,6 +1,7 @@
 
 
-
+function videoshare()
+{
 
 const socket = io('/')
 const videoGrid = document.getElementById('video-grid')
@@ -188,7 +189,7 @@ const setPlayVideo = () => {
 
 
 
-
+}
 
 function shareScreen()
 {
