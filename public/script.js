@@ -105,7 +105,7 @@ const playStop = () => {
 
 
 const shareScreen = async () => {
-  let captureStream = null
+
   let userId=1233
  
  
@@ -120,12 +120,16 @@ const shareScreen = async () => {
   try {
     
     const myVideo2 = document.createElement('video')
-    
-    myVideo2.srcObject=await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    stream=await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
+    myVideo2.srcObject=stream
+    const call = myPeer.call(userId, stream)
+
     myVideo2.addEventListener('loadedmetadata', () => {
       myVideo2.play()
      })
      videoGrid.append(myVideo2)
+
+
     var x= document.createAttribute("autoplay"); 
     myVideo2.setAttributeNode(x); 
     /*
