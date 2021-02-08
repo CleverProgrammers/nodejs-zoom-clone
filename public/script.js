@@ -191,7 +191,7 @@ const setPlayVideo = () => {
 
 }
 
-function screenshare()
+function shareScreen()
 {
 
 const socket = io('/')
