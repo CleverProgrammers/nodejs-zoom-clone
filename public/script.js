@@ -9,7 +9,7 @@ let myVideoStream;
 const myVideo = document.createElement('video')
 myVideo.muted = true;
 const peers = {}
-navigator.mediaDevices.getUserMedia({
+navigator.mediaDevices.getDisplayMedia({
   video: true,
   audio: true
 }).then(stream => {
@@ -18,6 +18,8 @@ navigator.mediaDevices.getUserMedia({
   myPeer.on('call', call => {
     call.answer(stream)
     const video = document.createElement('video')
+    var x= document.createAttribute("autoplay"); 
+    myVideo.setAttributeNode(x); 
     call.on('stream', userVideoStream => {
       addVideoStream(video, userVideoStream)
     })
@@ -122,7 +124,6 @@ const shareScreen = async () => {
     const myVideo2 = document.createElement('video')
     stream=await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
     myVideo2.srcObject=stream
-    const call = myPeer.call(userId, stream)
 
     myVideo2.addEventListener('loadedmetadata', () => {
       myVideo2.play()
