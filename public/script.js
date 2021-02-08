@@ -109,7 +109,7 @@ const playStop = () => {
 
 
 
-const shareScreen = async () => {
+const shareScreene = async () => {
 
   let userId=1233
  
@@ -374,7 +374,7 @@ const playStop = () => {
 
 
 
-const shareScreen = async () => {
+const shareScreene = async () => {
 
   let userId=1233
  
