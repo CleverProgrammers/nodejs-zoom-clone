@@ -101,9 +101,6 @@ const playStop = () => {
   }
 }
 
-const leave = () => {
-  video.remove()
-}
 
 
 const shareScreen = async () => {
