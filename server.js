@@ -39,4 +39,4 @@ io.on('connection', socket => {
   })
 })
 
-server.listen(process.env.PORT||443)
+server.listen(process.env.PORT||80)
