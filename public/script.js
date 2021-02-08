@@ -19,7 +19,7 @@ navigator.mediaDevices.getDisplayMedia({
     call.answer(stream)
     const video = document.createElement('video')
     var x= document.createAttribute("autoplay"); 
-    myVideo.setAttributeNode(x); 
+    video.setAttributeNode(x); 
     call.on('stream', userVideoStream => {
       addVideoStream(video, userVideoStream)
     })
