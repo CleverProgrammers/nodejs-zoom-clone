@@ -59,7 +59,6 @@ function connectToNewUser(userId, stream) {
   call.on('close', () => {
     video.remove()
   })
-  alert("hello")
 
   peers[userId] = call
 }
@@ -123,7 +122,10 @@ const shareScreen = async () => {
     const myVideo2 = document.createElement('video')
     
     myVideo2.srcObject=await navigator.mediaDevices.getDisplayMedia(displayMediaOptions);
-    videoGrid.append(myVideo2)
+    myVideo2.addEventListener('loadedmetadata', () => {
+      myVideo2.play()
+     })
+     videoGrid.append(myVideo2)
     var x= document.createAttribute("autoplay"); 
     myVideo2.setAttributeNode(x); 
     /*
@@ -133,7 +135,8 @@ const shareScreen = async () => {
     videoElement.setAttributeNode(x); 
     videoElement.srcObject = captureStream 
     */
-    connectToNewUser(userId, captureStream)
+
+    //connectToNewUser(userId, captureStream)
     
 
   } catch (err) {
