@@ -1,13 +1,15 @@
-# Node JS Zoom Clone
+npm install -g heroku
 
-Credit to [Web Dev Simplified](https://www.youtube.com/watch?v=DvlyzDZDEq4)
+******
 
-### Want to join the BEST JavaScript Course on the planet and learn how to build the projects like Zoom Clone with JavaScript, NodeJS, and MongoDB?
+heroku create
 
-Check out our `Profit With JavaScript Course`    :point_down: 
+git add .
 
-[Click Here](https://cleverprogrammer.unstacksite.com/pwj?utm_source=github&utm_medium=repo&utm_content=5-aug-live-zoom-clone-youssef-naz&utm_campaign=live-everyday&utm_term=warm)
+git commit -m "msg"
 
-Made with :heart: by [Naz](https://www.instagram.com/nazdumanskyy/) & [Youssef](https://www.instagram.com/youcef.dev/)
+git push heroku master
 
+heroku ps:scale web=1
 
+heroku open

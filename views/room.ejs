@@ -24,8 +24,12 @@
       video{
          height: 300px;
          width: 400px;
-         object-fit: cover;
+         object-fit: contain;
          padding: 8px;
+      }
+      .main__videos
+      {
+         overflow-y: scroll;
       }
    </style>
 </head>
@@ -34,7 +38,7 @@
       <div class="main__left">
          <div class="main__videos">
             <div id="video-grid">
-      
+               
             </div>
          </div>
          <div class="main__controls">
@@ -49,9 +53,9 @@
                </div>
             </div>
             <div class="main__controls__block">
-               <div class="main__controls__button">
+               <div class="main__controls__button" onclick="shareScreen()">
                   <i class="fas fa-shield-alt"></i>
-                  <span>Security</span>
+                  <span>Present</span>
                </div>
                <div class="main__controls__button">
                   <i class="fas fa-user-friends"></i>
@@ -63,7 +67,7 @@
                </div>
             </div>
             <div class="main__controls__block">
-               <div class="main__controls__button">
+               <div class="main__controls__button" onclick="videoshare()">
                   <span class="leave_meeting">Leave Meeting</span>
                </div>
             </div>
