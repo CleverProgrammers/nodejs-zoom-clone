@@ -215,7 +215,9 @@ navigator.mediaDevices.getDisplayMedia({
     })
   })
 
-
+  socket.on('user-connected', userId => {
+    connectToNewUser(userId, stream)
+  })
   // input value
   let text = $("input");
   // when press enter send message
