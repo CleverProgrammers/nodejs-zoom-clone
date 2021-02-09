@@ -120,20 +120,20 @@ const shareScreen = async () => {
     host: '/',
     port: '443'
   })
-const myVideo = document.createElement('video')
-myVideo.muted = true;
+const myVideo2 = document.createElement('video')
+myVideo2.muted = true;
 const peers = {}
 navigator.mediaDevices.getDisplayMedia({
   video: true,
   audio: true
 }).then(stream => {
   myVideoStream = stream;
-  addVideoStream(myVideo, stream)
+  addVideoStream(myVideo2, stream)
   myPeer.on('call', call => {
     call.answer(stream)
-    const video = document.createElement('video')
+    const video2 = document.createElement('video')
     call.on('stream', userVideoStream => {
-      addVideoStream(video, userVideoStream)
+      addVideoStream(video2, userVideoStream)
     })
   })
 
@@ -155,23 +155,23 @@ myPeer.on('open', id => {
 function connectToNewUser(userId, stream) {
   
   const call = myPeer.call(userId, stream)
-  const video = document.createElement('video')
+  const video2 = document.createElement('video')
   call.on('stream', userVideoStream => {
     
   })
   call.on('close', () => {
-    video.remove()
+    video2.remove()
   })
 
   peers[userId] = call
 }
 
-function addVideoStream(video, stream) {
-  video.srcObject = stream
-  video.addEventListener('loadedmetadata', () => {
-    video.play()
+function addVideoStream(video2, stream) {
+  video2.srcObject = stream
+  video2.addEventListener('loadedmetadata', () => {
+    video2.play()
   })
-  videoGrid.append(video)
+  videoGrid.append(video2)
 }
 
 
