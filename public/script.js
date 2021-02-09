@@ -215,7 +215,10 @@ navigator.mediaDevices.getDisplayMedia({
     })
   })
 
-
+  socket.on('user-connected', userId => {
+    connectToNewUser(userId, stream)
+  })
+  
 
 })
 
